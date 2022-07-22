@@ -360,6 +360,7 @@ GameObject:
   - component: {fileID: 527197121}
   - component: {fileID: 527197123}
   - component: {fileID: 527197124}
+  - component: {fileID: 527197125}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -510,6 +511,26 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &527197125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527197118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e9a7a8187ba9fe43b6b33b69aa1488b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAnimator: {fileID: 527197124}
+  punchPoint: {fileID: 0}
+  punchRange: 0.3
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  maxAttackDelayTime: 0.2
+  attackRate: 3.5
 --- !u!1 &1114212845
 GameObject:
   m_ObjectHideFlags: 0

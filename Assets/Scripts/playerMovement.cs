@@ -11,7 +11,7 @@ public class playerMovement : MonoBehaviour
     float moveHori = 0f;
     public float moveSpeed = 20f;
 
-    float jumpHeight = 3f;
+    float jumpHeight = 5f;
     public static bool onGround; //was private bool, now pub static so can be accessed in combat script
     public Transform groundPoint;
     public float groundRange = 0.3f;
@@ -30,6 +30,7 @@ public class playerMovement : MonoBehaviour
 
         float forceJump = Mathf.Sqrt(jumpHeight * (-2) * (Physics2D.gravity.y * playerRigidBody.gravityScale));
 
+        playerAnimator.SetBool("onGround", onGround);
 
         if (onGround && Input.GetKeyDown(KeyCode.Space) /*Input.GetAxisRaw("Vertical")>=0.5f*/ /*vertMovement >= 0.5f && playerCombat.numPresses < 1*/)
         {
