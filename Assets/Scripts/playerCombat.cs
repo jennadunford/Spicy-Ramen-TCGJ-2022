@@ -26,6 +26,9 @@ public class playerCombat : MonoBehaviour
     public float attackRange = 0.3f;
     public LayerMask enemyLayer;
 
+    public GameObject shadowDecoy;
+    int numShadowsAllowed = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +71,12 @@ public class playerCombat : MonoBehaviour
                 Debug.Log("player attacked");
 
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q) && numShadowsAllowed < 3)
+        {
+            Instantiate(shadowDecoy, transform.position, Quaternion.identity);
+            numShadowsAllowed++;
         }
 
 
