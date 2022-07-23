@@ -39,7 +39,7 @@ public class sceneManager : MonoBehaviour
 
     public void goToOverlookLand()
     {
-        SceneManager.LoadScene("enter name");
+        SceneManager.LoadScene("Outlook");
     }
 
     public void goToChamber()
