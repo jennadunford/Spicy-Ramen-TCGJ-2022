@@ -8,7 +8,7 @@ public class playerMovement : MonoBehaviour
 
     public Rigidbody2D playerRigidBody;
 
-    float moveHori = 0f;
+    public float moveHori = 0f;
     public float moveSpeed = 20f;
 
     float jumpHeight = 5f;
@@ -16,6 +16,8 @@ public class playerMovement : MonoBehaviour
     public Transform groundPoint;
     public float groundRange = 0.3f;
     public LayerMask groundLayer;
+
+    public bool facingRight = true;
 
     // Start is called before the first frame update
     void Start()
@@ -43,10 +45,12 @@ public class playerMovement : MonoBehaviour
         if (moveHori > 0)
         {
             gameObject.transform.localScale = new Vector3(0.5f, 0.5f, 1f);
+            facingRight = true;
         }
         else if (moveHori < 0)
         {
             gameObject.transform.localScale = new Vector3(-0.5f, 0.5f, 1f);
+            facingRight = false;
         }
 
     }
