@@ -44,6 +44,6 @@ public class sceneManager : MonoBehaviour
 
     public void goToChamber()
     {
-        SceneManager.LoadScene("enter name");
+        SceneManager.LoadScene("Base");
     }
 }

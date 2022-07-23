@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Outlook.unity
     guid: 0594bf043e4dd3c4d81d28ace69b3ffa
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 14703777a4710c84aa420b5bef00c0a9
   m_configObjects: {}
